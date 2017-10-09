@@ -29,7 +29,7 @@
       400
     ],
     "max-line-length": [
-      true,
+      false,
       120
     ],
     "no-consecutive-blank-lines": [
@@ -48,7 +48,7 @@
       true
     ],
     "interface-name": [
-      true,
+      false,
       "always-prefix"
     ],
     "no-angle-bracket-type-assertion": true,
@@ -185,7 +185,7 @@
       400
     ],
     "max-line-length": [
-      true,
+      false,
       120
     ],
     "no-consecutive-blank-lines": [
@@ -204,7 +204,7 @@
       true
     ],
     "interface-name": [
-      true,
+      false,
       "always-prefix"
     ],
      "no-angle-bracket-type-assertion": true,
