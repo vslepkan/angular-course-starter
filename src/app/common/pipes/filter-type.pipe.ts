@@ -11,7 +11,7 @@ export class FilterTypePipe implements PipeTransform {
     }
 
     return value
-      .filter(({ type }) =>
+      .filter(({ type }: { type: string }) =>
         type.toLowerCase() === arg.toLowerCase());
   }
 }
