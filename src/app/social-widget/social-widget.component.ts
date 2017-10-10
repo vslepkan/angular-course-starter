@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Hotel } from '../core/models/Hotel';
 
 @Component({
   selector: 'app-social-widget',
@@ -7,5 +6,6 @@ import { Hotel } from '../core/models/Hotel';
   styleUrls: ['./social-widget.component.css']
 })
 export class SocialWidgetComponent {
-  @Input() public currentHotel: Hotel;
+  @Input()
+  public currentHotel: Hotel;
 }

@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import { WeatherWidgetComponent } from './weather-widget/weather-widget.component';
 import { SocialWidgetComponent } from './social-widget/social-widget.component';
 import { ListWidgetComponent } from './list-widget/list-widget.component';
-import { FilterTypePipe } from './core/pipes/filter-type.pipe';
+import { FilterTypePipe } from './common/pipes/filter-type.pipe';
+import { HotelsService } from './common/services/hotels.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { FilterTypePipe } from './core/pipes/filter-type.pipe';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    HotelsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

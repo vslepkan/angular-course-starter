@@ -1,6 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import 'rxjs/add/operator/take';
-import { Hotel } from '../core/models/Hotel';
 
 @Component({
   selector: 'app-list-widget',
@@ -8,10 +6,14 @@ import { Hotel } from '../core/models/Hotel';
   styleUrls: ['./list-widget.component.css']
 })
 export class ListWidgetComponent {
-  @Input() public hotels: Hotel[];
-  @Input() public currentHotel: Hotel;
+  @Input()
+  public hotels: Hotel[];
 
-  @Output() public selectHotel: EventEmitter<Hotel> = new EventEmitter<Hotel>();
+  @Input()
+  public currentHotel: Hotel;
+
+  @Output()
+  public selectHotel: EventEmitter<Hotel> = new EventEmitter<Hotel>();
 
   public types: String[];
   public currentType: string;

@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Hotel } from '../models/Hotel';
 
 @Pipe({
   name: 'filterType'
@@ -7,12 +6,12 @@ import { Hotel } from '../models/Hotel';
 export class FilterTypePipe implements PipeTransform {
 
   public transform(value: Hotel[], arg: string): Hotel[] {
-    if (arg) {
-      return value
-        .filter(({ type }) =>
-          type.toLowerCase() === arg.toLowerCase());
+    if (!arg) {
+      return value;
     }
 
-    return value;
+    return value
+      .filter(({ type }) =>
+        type.toLowerCase() === arg.toLowerCase());
   }
 }

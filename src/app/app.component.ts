@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { hotels } from './core/data/hotels';
-import { Hotel } from './core/models/Hotel';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/take';
+import { HotelsService } from './common/services/hotels.service';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +11,10 @@ export class AppComponent implements OnInit {
   public hotels$: Observable<Hotel[]>;
   public currentHotel: Hotel;
 
-  public constructor() {
-    this.hotels$ = hotels;
+  public constructor(
+    private hotelsService: HotelsService
+  ) {
+    this.hotels$ = this.hotelsService.getHotels();
   }
 
   public ngOnInit(): void {
